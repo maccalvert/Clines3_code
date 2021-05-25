@@ -1,0 +1,12 @@
+#####################
+### This is the models that were rerun for 5 million iterations and 1 million burning with a step at 40. 
+#####################
+# This should lead to better convergence, so we'll check the traces to see if this is true. We'll also run the models and additional two times to make sure estimates
+# are consistent. 
+
+# Filtered invidiviuals shared set, linear model 
+gemma -g ../data/SDCD_filtIndiv_filtSet.geno -p ../data/SDCD_filtIndiv_filtSet.pheno -bslmm 1 -o SDCD_filtIndiv_filtSet_lm_1b5i -rpace 40 -w 1000000 -s 5000000 
+
+gemma -g ../data/SDND_filtIndiv_filtSet.geno -p ../data/SDND_filtIndiv_filtSet.pheno -bslmm 1 -o SDND_filtIndiv_filtSet_lm_1b5i -rpace 40 -w 1000000 -s 5000000
+
+gemma -g ../data/CDND_filtIndiv_filtSet.geno -p ../data/CDND_filtIndiv_filtSet.pheno -bslmm 1 -o CDND_filtIndiv_filtSet_lm_1b5i -rpace 40 -w 1000000 -s 5000000 
